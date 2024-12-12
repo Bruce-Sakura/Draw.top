@@ -1,0 +1,10 @@
+D:\Program\Draw app\Draw app\bin\Debug\Draw app.exe.config
+D:\Program\Draw app\Draw app\bin\Debug\Draw app.exe
+D:\Program\Draw app\Draw app\bin\Debug\Draw app.pdb
+D:\Program\Draw app\Draw app\obj\Debug\Draw app.csproj.AssemblyReference.cache
+D:\Program\Draw app\Draw app\obj\Debug\Draw_app.Properties.Resources.resources
+D:\Program\Draw app\Draw app\obj\Debug\Draw app.csproj.GenerateResource.cache
+D:\Program\Draw app\Draw app\obj\Debug\Draw app.csproj.CoreCompileInputs.cache
+D:\Program\Draw app\Draw app\obj\Debug\Draw app.exe
+D:\Program\Draw app\Draw app\obj\Debug\Draw app.pdb
+D:\Program\Draw app\Draw app\obj\Debug\Draw_app.Form1.resources
