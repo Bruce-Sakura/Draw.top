@@ -38,31 +38,33 @@
             this.button_pen_size_down = new System.Windows.Forms.Button();
             this.label_show_pen_size = new System.Windows.Forms.Label();
             this.panel_control = new System.Windows.Forms.Panel();
+            this.button_eraser = new System.Windows.Forms.Button();
+            this.button_save_jpg = new System.Windows.Forms.Button();
+            this.button_undo = new System.Windows.Forms.Button();
+            this.colorEdit = new System.Windows.Forms.Button();
             this.checkBox1_fill = new System.Windows.Forms.CheckBox();
             this.button_Triangle = new System.Windows.Forms.Button();
             this.button_free_draw = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_draw_area = new System.Windows.Forms.Panel();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorEdit = new System.Windows.Forms.Button();
-            this.button_undo = new System.Windows.Forms.Button();
-            this.button_save_jpg = new System.Windows.Forms.Button();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip3 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_control.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel_draw_area.SuspendLayout();
             this.statusStrip2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.statusStrip3.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_LINE
@@ -133,7 +135,7 @@
             // 
             this.button_pen_size_up.BackColor = System.Drawing.SystemColors.Control;
             this.button_pen_size_up.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pen_size_up.Location = new System.Drawing.Point(827, 38);
+            this.button_pen_size_up.Location = new System.Drawing.Point(702, 37);
             this.button_pen_size_up.Name = "button_pen_size_up";
             this.button_pen_size_up.Size = new System.Drawing.Size(50, 50);
             this.button_pen_size_up.TabIndex = 6;
@@ -145,7 +147,7 @@
             // 
             this.button_pen_size_down.BackColor = System.Drawing.SystemColors.Control;
             this.button_pen_size_down.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_pen_size_down.Location = new System.Drawing.Point(883, 38);
+            this.button_pen_size_down.Location = new System.Drawing.Point(758, 37);
             this.button_pen_size_down.Name = "button_pen_size_down";
             this.button_pen_size_down.Size = new System.Drawing.Size(50, 50);
             this.button_pen_size_down.TabIndex = 7;
@@ -156,18 +158,17 @@
             // label_show_pen_size
             // 
             this.label_show_pen_size.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_show_pen_size.Location = new System.Drawing.Point(939, 38);
+            this.label_show_pen_size.Location = new System.Drawing.Point(814, 37);
             this.label_show_pen_size.Name = "label_show_pen_size";
             this.label_show_pen_size.Size = new System.Drawing.Size(50, 50);
             this.label_show_pen_size.TabIndex = 8;
             this.label_show_pen_size.Text = "N";
             this.label_show_pen_size.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_show_pen_size.Click += new System.EventHandler(this.label_show_pen_size_Click);
             // 
             // panel_control
             // 
-            this.panel_control.BackColor = System.Drawing.Color.Gray;
-            this.panel_control.Controls.Add(this.button1);
+            this.panel_control.BackColor = System.Drawing.Color.Silver;
+            this.panel_control.Controls.Add(this.button_eraser);
             this.panel_control.Controls.Add(this.button_save_jpg);
             this.panel_control.Controls.Add(this.button_undo);
             this.panel_control.Controls.Add(this.colorEdit);
@@ -189,7 +190,54 @@
             this.panel_control.Name = "panel_control";
             this.panel_control.Size = new System.Drawing.Size(1124, 100);
             this.panel_control.TabIndex = 9;
-            this.panel_control.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_control_Paint);
+            // 
+            // button_eraser
+            // 
+            this.button_eraser.BackColor = System.Drawing.SystemColors.Control;
+            this.button_eraser.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_eraser.Location = new System.Drawing.Point(1006, 39);
+            this.button_eraser.Name = "button_eraser";
+            this.button_eraser.Size = new System.Drawing.Size(50, 50);
+            this.button_eraser.TabIndex = 15;
+            this.button_eraser.Text = "🧲";
+            this.button_eraser.UseVisualStyleBackColor = false;
+            this.button_eraser.Click += new System.EventHandler(this.button_eraser_Click);
+            // 
+            // button_save_jpg
+            // 
+            this.button_save_jpg.BackColor = System.Drawing.SystemColors.Control;
+            this.button_save_jpg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_save_jpg.Location = new System.Drawing.Point(422, 38);
+            this.button_save_jpg.Name = "button_save_jpg";
+            this.button_save_jpg.Size = new System.Drawing.Size(50, 50);
+            this.button_save_jpg.TabIndex = 14;
+            this.button_save_jpg.Text = "💾";
+            this.button_save_jpg.UseVisualStyleBackColor = false;
+            this.button_save_jpg.Click += new System.EventHandler(this.button_save_jpg_Click);
+            // 
+            // button_undo
+            // 
+            this.button_undo.BackColor = System.Drawing.SystemColors.Control;
+            this.button_undo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_undo.Location = new System.Drawing.Point(366, 38);
+            this.button_undo.Name = "button_undo";
+            this.button_undo.Size = new System.Drawing.Size(50, 50);
+            this.button_undo.TabIndex = 13;
+            this.button_undo.Text = "🔙";
+            this.button_undo.UseVisualStyleBackColor = false;
+            this.button_undo.Click += new System.EventHandler(this.button_undo_Click);
+            // 
+            // colorEdit
+            // 
+            this.colorEdit.BackColor = System.Drawing.SystemColors.Control;
+            this.colorEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colorEdit.Location = new System.Drawing.Point(590, 38);
+            this.colorEdit.Name = "colorEdit";
+            this.colorEdit.Size = new System.Drawing.Size(50, 50);
+            this.colorEdit.TabIndex = 12;
+            this.colorEdit.Text = "🎨";
+            this.colorEdit.UseVisualStyleBackColor = false;
+            this.colorEdit.Click += new System.EventHandler(this.colorEdit_Click);
             // 
             // checkBox1_fill
             // 
@@ -200,7 +248,6 @@
             this.checkBox1_fill.TabIndex = 11;
             this.checkBox1_fill.Text = "Fill";
             this.checkBox1_fill.UseVisualStyleBackColor = true;
-            this.checkBox1_fill.CheckedChanged += new System.EventHandler(this.checkBox1_fill_CheckedChanged);
             // 
             // button_Triangle
             // 
@@ -224,9 +271,60 @@
             this.button_free_draw.UseVisualStyleBackColor = true;
             this.button_free_draw.Click += new System.EventHandler(this.button_free_draw_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem,
+            this.aboutToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1124, 28);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveFileToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // saveFileToolStripMenuItem
+            // 
+            this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.saveFileToolStripMenuItem.Text = "save file";
+            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // panel_draw_area
             // 
-            this.panel_draw_area.BackColor = System.Drawing.SystemColors.Control;
+            this.panel_draw_area.BackColor = System.Drawing.Color.White;
+            this.panel_draw_area.Controls.Add(this.statusStrip3);
+            this.panel_draw_area.Controls.Add(this.statusStrip2);
+            this.panel_draw_area.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panel_draw_area.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_draw_area.Location = new System.Drawing.Point(0, 100);
             this.panel_draw_area.Name = "panel_draw_area";
@@ -237,42 +335,6 @@
             this.panel_draw_area.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_draw_area_MouseMove);
             this.panel_draw_area.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_draw_area_MouseUp);
             // 
-            // colorEdit
-            // 
-            this.colorEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.colorEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colorEdit.Location = new System.Drawing.Point(590, 38);
-            this.colorEdit.Name = "colorEdit";
-            this.colorEdit.Size = new System.Drawing.Size(50, 50);
-            this.colorEdit.TabIndex = 12;
-            this.colorEdit.Text = "🎨";
-            this.colorEdit.UseVisualStyleBackColor = false;
-            this.colorEdit.Click += new System.EventHandler(this.colorEdit_Click);
-            // 
-            // button_undo
-            // 
-            this.button_undo.BackColor = System.Drawing.SystemColors.Control;
-            this.button_undo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_undo.Location = new System.Drawing.Point(366, 38);
-            this.button_undo.Name = "button_undo";
-            this.button_undo.Size = new System.Drawing.Size(50, 50);
-            this.button_undo.TabIndex = 13;
-            this.button_undo.Text = "🔙";
-            this.button_undo.UseVisualStyleBackColor = false;
-            this.button_undo.Click += new System.EventHandler(this.button_undo_Click);
-            // 
-            // button_save_jpg
-            // 
-            this.button_save_jpg.BackColor = System.Drawing.SystemColors.Control;
-            this.button_save_jpg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_save_jpg.Location = new System.Drawing.Point(422, 38);
-            this.button_save_jpg.Name = "button_save_jpg";
-            this.button_save_jpg.Size = new System.Drawing.Size(50, 50);
-            this.button_save_jpg.TabIndex = 14;
-            this.button_save_jpg.Text = "💾";
-            this.button_save_jpg.UseVisualStyleBackColor = false;
-            this.button_save_jpg.Click += new System.EventHandler(this.button_save_jpg_Click);
-            // 
             // statusStrip2
             // 
             this.statusStrip2.AutoSize = false;
@@ -280,7 +342,7 @@
             this.statusStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel2});
-            this.statusStrip2.Location = new System.Drawing.Point(118, 593);
+            this.statusStrip2.Location = new System.Drawing.Point(100, 493);
             this.statusStrip2.Name = "statusStrip2";
             this.statusStrip2.Size = new System.Drawing.Size(100, 20);
             this.statusStrip2.TabIndex = 1;
@@ -318,7 +380,7 @@
             this.statusStrip3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel3});
-            this.statusStrip3.Location = new System.Drawing.Point(224, 593);
+            this.statusStrip3.Location = new System.Drawing.Point(200, 493);
             this.statusStrip3.Name = "statusStrip3";
             this.statusStrip3.Size = new System.Drawing.Size(100, 20);
             this.statusStrip3.TabIndex = 11;
@@ -330,64 +392,12 @@
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(17, 14);
             this.toolStripStatusLabel3.Text = "1";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1006, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "🔙";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1124, 28);
-            this.menuStrip1.TabIndex = 16;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
-            this.helpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1124, 617);
-            this.Controls.Add(this.statusStrip3);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.statusStrip2);
             this.Controls.Add(this.panel_draw_area);
             this.Controls.Add(this.panel_control);
             this.MainMenuStrip = this.menuStrip1;
@@ -396,14 +406,15 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_control.ResumeLayout(false);
             this.panel_control.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel_draw_area.ResumeLayout(false);
             this.statusStrip2.ResumeLayout(false);
             this.statusStrip2.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.statusStrip3.ResumeLayout(false);
             this.statusStrip3.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -434,11 +445,12 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.StatusStrip statusStrip3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_eraser;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveFileToolStripMenuItem;
     }
 }
