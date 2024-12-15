@@ -7,4 +7,4 @@ D:\Program\Draw app\Draw app\obj\Debug\Draw app.csproj.GenerateResource.cache
 D:\Program\Draw app\Draw app\obj\Debug\Draw app.csproj.CoreCompileInputs.cache
 D:\Program\Draw app\Draw app\obj\Debug\Draw app.exe
 D:\Program\Draw app\Draw app\obj\Debug\Draw app.pdb
-D:\Program\Draw app\Draw app\obj\Debug\Draw_app.Form1.resources
+D:\Program\Draw app\Draw app\obj\Debug\Draw_app.Draw.resources
