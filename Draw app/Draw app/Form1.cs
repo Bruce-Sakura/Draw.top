@@ -6,11 +6,6 @@ using System.Drawing.Drawing2D;
 using System.Reflection;
 using System.Windows.Forms;
 
-/// Designer name:Wang Yongji
-/// Date: Dec. 12/14/2024
-/// Version :  lastest
-/// Description:Draw app
-
 namespace Draw_app
 {
     public partial class Draw : Form
